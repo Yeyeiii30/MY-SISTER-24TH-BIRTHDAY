@@ -125,9 +125,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 </h2>
 
                 <p>
-                    Después de 19 años,
-                    había un número que tenía
-                    que aparecer.
+                    Acaba de aparecer un
+                    numero sumamente especial
+                    un numero que marca una nueva etapa...
                 </p>
 
                 <p>
