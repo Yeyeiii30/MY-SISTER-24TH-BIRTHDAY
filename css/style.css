@@ -1,0 +1,1915 @@
+/* ============================================================
+   CUMPLEAÑOS 24
+   19 AÑOS DESPUÉS
+   ============================================================ */
+
+
+/* ============================================================
+   VARIABLES
+   ============================================================ */
+
+:root {
+
+    --negro: #080808;
+    --negro-suave: #111111;
+
+    --rosa: #ff4f81;
+    --rosa-claro: #ff8fab;
+    --rosa-suave: #ffd6e2;
+
+    --rojo: #e91e3f;
+    --rojo-oscuro: #9f1239;
+
+    --blanco: #ffffff;
+    --gris: #b8b8b8;
+    --gris-oscuro: #777777;
+
+    --fuente-titulo: "Playfair Display", serif;
+    --fuente-texto: "Poppins", sans-serif;
+
+    --transicion: 0.5s ease;
+
+}
+
+
+/* ============================================================
+   RESET
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background: var(--negro);
+
+    color: var(--blanco);
+
+    font-family: var(--fuente-texto);
+
+    overflow-x: hidden;
+
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+/* ============================================================
+   GLOBOS
+   ============================================================ */
+
+.globos {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 10;
+
+}
+
+
+.globo {
+
+    position: absolute;
+
+    width: 55px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    bottom: -100px;
+
+    opacity: 0.75;
+
+    animation:
+        subirGlobo 14s linear infinite;
+
+}
+
+
+/* Cuerdas */
+
+.globo::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 1px;
+
+    height: 100px;
+
+    background: rgba(255,255,255,0.3);
+
+    left: 50%;
+
+    top: 68px;
+
+}
+
+
+/* Colores */
+
+.globo-rosa {
+
+    background: var(--rosa);
+
+}
+
+
+.globo-rojo {
+
+    background: var(--rojo);
+
+}
+
+
+.globo-blanco {
+
+    background: var(--blanco);
+
+}
+
+
+.globo-negro {
+
+    background: #242424;
+
+}
+
+
+/* Posiciones */
+
+.globo:nth-child(1) {
+
+    left: 5%;
+
+    animation-delay: 0s;
+
+}
+
+
+.globo:nth-child(2) {
+
+    left: 20%;
+
+    animation-delay: 4s;
+
+}
+
+
+.globo:nth-child(3) {
+
+    left: 42%;
+
+    animation-delay: 8s;
+
+}
+
+
+.globo:nth-child(4) {
+
+    left: 65%;
+
+    animation-delay: 2s;
+
+}
+
+
+.globo:nth-child(5) {
+
+    left: 80%;
+
+    animation-delay: 6s;
+
+}
+
+
+.globo:nth-child(6) {
+
+    left: 92%;
+
+    animation-delay: 10s;
+
+}
+
+
+@keyframes subirGlobo {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(-5deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-55vh)
+            rotate(5deg);
+
+    }
+
+    100% {
+
+        transform:
+            translateY(-120vh)
+            rotate(-5deg);
+
+    }
+
+}
+
+
+/* ============================================================
+   INICIO
+   ============================================================ */
+
+.inicio {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(255, 79, 129, 0.18),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            180deg,
+            #050505,
+            #0d0d0d
+        );
+
+}
+
+
+.inicio::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    animation:
+        pulso 5s infinite;
+
+}
+
+
+.inicio-contenido {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    padding: 30px;
+
+}
+
+
+.inicio-superior {
+
+    font-size: 0.75rem;
+
+    letter-spacing: 5px;
+
+    color: var(--rosa);
+
+    margin-bottom: 20px;
+
+}
+
+
+.inicio h1 {
+
+    font-family: var(--fuente-titulo);
+
+    font-size: clamp(9rem, 30vw, 20rem);
+
+    line-height: 0.75;
+
+    font-weight: 400;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #ff4f81,
+            #e91e3f
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0 0 80px rgba(255,79,129,0.2);
+
+}
+
+
+.inicio h2 {
+
+    font-family: var(--fuente-titulo);
+
+    font-size: clamp(2rem, 6vw, 4rem);
+
+    font-weight: 400;
+
+    margin-top: 25px;
+
+}
+
+
+.inicio-texto {
+
+    color: var(--gris);
+
+    max-width: 500px;
+
+    margin: 25px auto 35px;
+
+    line-height: 1.8;
+
+}
+
+
+.btn-principal,
+.btn-siguiente,
+.btn-girar,
+.btn-carta {
+
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--rosa),
+            var(--rojo)
+        );
+
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 50px;
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.btn-principal:hover,
+.btn-siguiente:hover,
+.btn-girar:hover,
+.btn-carta:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(255, 79, 129, 0.35);
+
+}
+
+
+/* ============================================================
+   CARTAS DEL RECORRIDO
+   ============================================================ */
+
+.carta-recorrido {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 100px 25px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* Línea vertical */
+
+.carta-recorrido::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 1px;
+
+    height: 100%;
+
+    left: 50%;
+
+    top: 0;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(255,255,255,0.1),
+            transparent
+        );
+
+}
+
+
+/* Contenedor */
+
+.carta-contenedor {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 850px;
+
+}
+
+
+/* Número */
+
+.numero-carta {
+
+    font-family: var(--fuente-titulo);
+
+    font-size: 5rem;
+
+    color: rgba(255,255,255,0.08);
+
+    line-height: 1;
+
+    margin-bottom: -20px;
+
+}
+
+
+/* Etiqueta */
+
+.etiqueta-carta {
+
+    font-size: 0.7rem;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+
+    color: var(--rosa);
+
+    margin-bottom: 15px;
+
+}
+
+
+/* Título */
+
+.carta-contenedor h2 {
+
+    font-family: var(--fuente-titulo);
+
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    margin-bottom: 45px;
+
+}
+
+
+/* ============================================================
+   FOTOGRAFÍAS
+   ============================================================ */
+
+.foto-carta {
+
+    position: relative;
+
+    width: 190px;
+
+    height: 230px;
+
+    margin: 0 auto 45px;
+
+    overflow: hidden;
+
+    background: #191919;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.5);
+
+    transform:
+        rotate(-2deg);
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+
+}
+
+
+.foto-carta:hover {
+
+    transform:
+        rotate(0deg)
+        scale(1.04);
+
+    box-shadow:
+        0 25px 70px rgba(255,79,129,0.18);
+
+}
+
+
+.foto-carta img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.foto-carta span {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: rgba(255,255,255,0.3);
+
+    font-size: 0.65rem;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* Cuando exista foto real ocultamos el texto */
+
+.foto-carta img:not([src=""]) + span {
+
+    display: none;
+
+}
+
+
+/* ============================================================
+   TEXTO DE LAS CARTAS
+   ============================================================ */
+
+.texto-carta {
+
+    max-width: 650px;
+
+    margin: auto;
+
+}
+
+
+.texto-carta p {
+
+    font-size: 1rem;
+
+    line-height: 2;
+
+    color: rgba(255,255,255,0.78);
+
+    margin-bottom: 25px;
+
+}
+
+
+.texto-carta p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.texto-destacado {
+
+    font-family: var(--fuente-titulo);
+
+    font-size: 2.3rem !important;
+
+    color: var(--blanco) !important;
+
+}
+
+
+/* ============================================================
+   FONDOS DE LAS CARTAS
+   ============================================================ */
+
+.carta-oscura {
+
+    background:
+
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(255,79,129,0.08),
+            transparent 40%
+        ),
+
+        #090909;
+
+}
+
+
+.carta-rosa {
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #10090c,
+            #1b0d12
+        );
+
+}
+
+
+.carta-negra {
+
+    background: #050505;
+
+}
+
+
+.carta-roja {
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(233,30,63,0.18),
+            transparent 45%
+        ),
+
+        #16070a;
+
+}
+
+
+.carta-rosa-clara {
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #160b10,
+            #241017
+        );
+
+}
+
+
+.carta-blanca {
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #151214,
+            #0b0a0b
+        );
+
+}
+
+
+.carta-negra-final {
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(255,79,129,0.15),
+            transparent 40%
+        ),
+
+        #030303;
+
+}
+
+
+/* ============================================================
+   INDICADOR
+   ============================================================ */
+
+.indicador-scroll {
+
+    margin-top: 70px;
+
+    font-size: 1.5rem;
+
+    color: var(--rosa);
+
+    animation:
+        bajar 1.5s infinite;
+
+}
+
+
+@keyframes bajar {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+        opacity: 0.5;
+
+    }
+
+    50% {
+
+        transform:
+            translateY(10px);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* ============================================================
+   BOTÓN CONTINUAR
+   ============================================================ */
+
+.btn-siguiente {
+
+    margin-top: 50px;
+
+}
+
+
+/* ============================================================
+   RULETA
+   ============================================================ */
+
+.ruleta-seccion {
+
+    min-height: 100vh;
+
+    padding: 100px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(255,79,129,0.15),
+            transparent 35%
+        ),
+
+        #050505;
+
+}
+
+
+.encabezado-seccion {
+
+    max-width: 700px;
+
+    margin-bottom: 60px;
+
+}
+
+
+.encabezado-seccion p {
+
+    color: var(--rosa);
+
+    letter-spacing: 4px;
+
+    font-size: 0.7rem;
+
+    margin-bottom: 15px;
+
+}
+
+
+.encabezado-seccion h2 {
+
+    font-family: var(--fuente-titulo);
+
+    font-size: clamp(2.3rem, 6vw, 4.5rem);
+
+    font-weight: 400;
+
+    margin-bottom: 15px;
+
+}
+
+
+.encabezado-seccion span {
+
+    color: var(--gris);
+
+    line-height: 1.7;
+
+}
+
+
+/* Contenedor */
+
+.ruleta-container {
+
+    position: relative;
+
+    width: 320px;
+
+    height: 320px;
+
+}
+
+
+/* Flecha */
+
+.flecha-ruleta {
+
+    position: absolute;
+
+    top: -28px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    color: var(--rosa);
+
+    font-size: 2rem;
+
+    z-index: 20;
+
+    filter:
+        drop-shadow(
+            0 0 10px rgba(255,79,129,0.5)
+        );
+
+}
+
+
+/* Ruleta */
+
+.ruleta {
+
+    position: relative;
+
+    width: 320px;
+
+    height: 320px;
+
+    border-radius: 50%;
+
+    background:
+
+        conic-gradient(
+            #ff4f81 0deg 15deg,
+            #171717 15deg 30deg,
+            #ff4f81 30deg 45deg,
+            #171717 45deg 60deg,
+            #ff4f81 60deg 75deg,
+            #171717 75deg 90deg,
+            #ff4f81 90deg 105deg,
+            #171717 105deg 120deg,
+            #ff4f81 120deg 135deg,
+            #171717 135deg 150deg,
+            #ff4f81 150deg 165deg,
+            #171717 165deg 180deg,
+            #ff4f81 180deg 195deg,
+            #171717 195deg 210deg,
+            #ff4f81 210deg 225deg,
+            #171717 225deg 240deg,
+            #ff4f81 240deg 255deg,
+            #171717 255deg 270deg,
+            #ff4f81 270deg 285deg,
+            #171717 285deg 300deg,
+            #ff4f81 300deg 315deg,
+            #171717 315deg 330deg,
+            #ff4f81 330deg 345deg,
+            #171717 345deg 360deg
+        );
+
+    border: 8px solid #ffffff;
+
+    box-shadow:
+        0 0 0 8px rgba(255,255,255,0.05),
+        0 0 70px rgba(255,79,129,0.25);
+
+    transition:
+        transform 5s cubic-bezier(0.15,0.75,0.15,1);
+
+}
+
+
+/* Números */
+
+.ruleta span {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 35px;
+    height: 35px;
+
+    margin:
+        -17.5px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+
+    color: white;
+
+    transform:
+
+        rotate(
+            calc(var(--numero) * 15deg)
+        )
+
+        translateY(-145px)
+
+        rotate(
+            calc(var(--numero) * -15deg)
+        );
+
+}
+
+
+/* Centro */
+
+.ruleta::after {
+
+    content: "♥";
+
+    position: absolute;
+
+    width: 85px;
+    height: 85px;
+
+    border-radius: 50%;
+
+    background: #0b0b0b;
+
+    border: 3px solid var(--rosa);
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--rosa);
+
+    font-family: var(--fuente-titulo);
+
+    font-size: 2rem;
+
+    z-index: 10;
+
+}
+
+
+.ruleta.numero-24::after {
+
+    content: "24";
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--rosa),
+            var(--rojo)
+        );
+
+}
+
+
+/* ============================================================
+   BOTÓN RULETA
+   ============================================================ */
+
+.btn-girar {
+
+    margin-top: 55px;
+
+}
+
+
+.btn-girar:disabled {
+
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+}
+
+
+/* ============================================================
+   RESULTADO
+   ============================================================ */
+
+.resultado-ruleta {
+
+    margin-top: 40px;
+
+    max-width: 500px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,0.05);
+
+    border:
+        1px solid rgba(255,79,129,0.4);
+
+    border-radius: 20px;
+
+    opacity: 0;
+
+    transform:
+        translateY(20px)
+        scale(0.95);
+
+    transition:
+        all 0.6s ease;
+
+}
+
+
+.resultado-ruleta.mostrar {
+
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+.resultado-icono {
+
+    font-size: 3rem;
+
+    color: var(--rosa);
+
+    animation:
+        latido 1.2s infinite;
+
+}
+
+
+.resultado-ruleta h2 {
+
+    font-family: var(--fuente-titulo);
+
+    font-size: 2rem;
+
+    margin: 10px 0;
+
+}
+
+
+.resultado-ruleta p {
+
+    color: var(--gris);
+
+    line-height: 1.7;
+
+}
+
+
+.resultado-ruleta strong {
+
+    color: var(--rosa);
+
+    font-size: 1.3rem;
+
+}
+
+
+/* ============================================================
+   CARTA FINAL
+   ============================================================ */
+
+.carta-seccion {
+
+    min-height: 100vh;
+
+    padding: 120px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(255,79,129,0.15),
+            transparent 35%
+        ),
+
+        #080808;
+
+}
+
+
+.carta-final-contenedor {
+
+    width: 100%;
+
+    max-width: 800px;
+
+}
+
+
+.carta-final-contenedor h2 {
+
+    font-family: var(--fuente-titulo);
+
+    font-weight: 400;
+
+    font-size: clamp(2.5rem, 7vw, 5rem);
+
+    margin-bottom: 60px;
+
+}
+
+
+/* Sobre */
+
+.sobre {
+
+    position: relative;
+
+    width: 280px;
+
+    height: 190px;
+
+    margin: 0 auto 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c2185b,
+            #880e4f
+        );
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.5);
+
+}
+
+
+.sobre::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 50%,
+            rgba(0,0,0,0.15) 50%
+        );
+
+}
+
+
+.sobre-tapa {
+
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    border-left: 140px solid transparent;
+
+    border-right: 140px solid transparent;
+
+    border-top: 100px solid #e91e63;
+
+    top: 0;
+
+    left: 0;
+
+    z-index: 3;
+
+}
+
+
+.corazon {
+
+    position: absolute;
+
+    z-index: 5;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    color: white;
+
+    font-size: 3rem;
+
+    text-shadow:
+        0 5px 15px rgba(0,0,0,0.3);
+
+    animation:
+        latido 1.5s infinite;
+
+}
+
+
+/* ============================================================
+   CONTENIDO DE LA CARTA
+   ============================================================ */
+
+.carta-contenido {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transform:
+        translateY(20px);
+
+    transition:
+        max-height 1s ease,
+        opacity 0.7s ease,
+        transform 0.7s ease;
+
+}
+
+
+.carta-contenido.mostrar {
+
+    max-height: 2000px;
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    margin-top: 60px;
+
+    padding: 45px 35px;
+
+    background:
+        #fffafa;
+
+    color: #222;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.5);
+
+}
+
+
+.carta-titulo {
+
+    font-family: var(--fuente-titulo);
+
+    font-size: 2rem;
+
+    color: #9f1239;
+
+    margin-bottom: 30px;
+
+}
+
+
+.carta-texto {
+
+    text-align: left;
+
+    max-width: 650px;
+
+    margin: auto;
+
+}
+
+
+.carta-texto p {
+
+    font-family: var(--fuente-titulo);
+
+    font-size: 1.1rem;
+
+    line-height: 2;
+
+    margin-bottom: 25px;
+
+}
+
+
+.firma {
+
+    font-family: var(--fuente-titulo);
+
+    color: #9f1239;
+
+    font-size: 1.3rem;
+
+    margin-top: 40px;
+
+}
+
+
+/* ============================================================
+   FINAL
+   ============================================================ */
+
+.final-felicitaciones {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 25px;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(255,79,129,0.2),
+            transparent 40%
+        ),
+
+        #050505;
+
+}
+
+
+.final-contenido {
+
+    max-width: 800px;
+
+}
+
+
+.final-contenido > p:first-child {
+
+    color: var(--rosa);
+
+    font-size: 0.75rem;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.final-contenido h2 {
+
+    font-family: var(--fuente-titulo);
+
+    font-size: clamp(3rem, 10vw, 8rem);
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    background:
+        linear-gradient(
+            135deg,
+            white,
+            var(--rosa),
+            var(--rojo)
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+.final-linea {
+
+    width: 100px;
+
+    height: 1px;
+
+    background: var(--rosa);
+
+    margin: 40px auto;
+
+}
+
+
+.final-mensaje {
+
+    max-width: 550px;
+
+    margin: auto;
+
+    color: var(--gris);
+
+    line-height: 2;
+
+}
+
+
+.final-corazon {
+
+    color: var(--rosa);
+
+    font-size: 3rem;
+
+    margin: 35px 0;
+
+    animation:
+        latido 1.5s infinite;
+
+}
+
+
+.final-cierre {
+
+    font-family: var(--fuente-titulo);
+
+    font-size: 1.4rem;
+
+    color: white;
+
+}
+
+
+/* ============================================================
+   CONFETI
+   ============================================================ */
+
+.confeti {
+
+    position: fixed;
+
+    z-index: 9999;
+
+    pointer-events: none;
+
+    border-radius: 2px;
+
+    animation-name:
+        caerConfeti;
+
+    animation-timing-function:
+        linear;
+
+    animation-fill-mode:
+        forwards;
+
+}
+
+
+@keyframes caerConfeti {
+
+    0% {
+
+        transform:
+            translateY(-30px)
+            rotate(0deg);
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* ============================================================
+   ANIMACIONES
+   ============================================================ */
+
+@keyframes pulso {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+        opacity: 0.3;
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.2);
+
+        opacity: 0.7;
+
+    }
+
+}
+
+
+@keyframes latido {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.2);
+
+    }
+
+}
+
+
+/* ============================================================
+   ELEMENTOS QUE APARECEN AL HACER SCROLL
+   ============================================================ */
+
+.recuerdo,
+.presente-mensaje,
+.foto-presente,
+.ruleta-container,
+.sobre {
+
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+}
+
+
+.recuerdo.visible,
+.presente-mensaje.visible,
+.foto-presente.visible,
+.ruleta-container.visible,
+.sobre.visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+    .inicio {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .inicio-superior {
+
+        letter-spacing: 3px;
+
+        font-size: 0.6rem;
+
+    }
+
+
+    .carta-recorrido {
+
+        padding:
+            90px 20px;
+
+    }
+
+
+    .numero-carta {
+
+        font-size: 4rem;
+
+    }
+
+
+    .carta-contenedor h2 {
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .foto-carta {
+
+        width: 160px;
+
+        height: 200px;
+
+    }
+
+
+    .texto-carta p {
+
+        font-size: 0.92rem;
+
+        line-height: 1.9;
+
+    }
+
+
+    .texto-destacado {
+
+        font-size: 2rem !important;
+
+    }
+
+
+    .ruleta-container {
+
+        width: 280px;
+
+        height: 280px;
+
+    }
+
+
+    .ruleta {
+
+        width: 280px;
+
+        height: 280px;
+
+    }
+
+
+    .ruleta span {
+
+        transform:
+
+            rotate(
+                calc(var(--numero) * 15deg)
+            )
+
+            translateY(-125px)
+
+            rotate(
+                calc(var(--numero) * -15deg)
+            );
+
+    }
+
+
+    .carta-contenido.mostrar {
+
+        padding:
+            30px 20px;
+
+    }
+
+
+    .carta-texto p {
+
+        font-size: 1rem;
+
+    }
+
+
+    .sobre {
+
+        width: 250px;
+
+        height: 170px;
+
+    }
+
+
+    .sobre-tapa {
+
+        border-left-width: 125px;
+
+        border-right-width: 125px;
+
+        border-top-width: 90px;
+
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .inicio h1 {
+
+        font-size: 9rem;
+
+    }
+
+
+    .carta-contenedor h2 {
+
+        font-size: 2.6rem;
+
+    }
+
+
+    .ruleta-container {
+
+        width: 250px;
+
+        height: 250px;
+
+    }
+
+
+    .ruleta {
+
+        width: 250px;
+
+        height: 250px;
+
+    }
+
+
+    .ruleta span {
+
+        transform:
+
+            rotate(
+                calc(var(--numero) * 15deg)
+            )
+
+            translateY(-110px)
+
+            rotate(
+                calc(var(--numero) * -15deg)
+            );
+
+        font-size: 0.65rem;
+
+    }
+
+
+    .foto-carta {
+
+        width: 145px;
+
+        height: 180px;
+
+    }
+
+
+    .final-cierre {
+
+        font-size: 1.1rem;
+
+    }
+
+}
